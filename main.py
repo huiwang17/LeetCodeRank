@@ -140,7 +140,7 @@ users.sort(key=lambda x: x.stat["totalSubmissions"], reverse=True)
 title = f"@所有人 扪心自问，今天刷题了吗？追上{users[0].nickname}了吗？没有的话还不去刷？？？\r\r"
 msg = f"全群以{users[0].nickname}为目标!!!\r\r"
 for u in users:
-    msg += f"{u.nickname} solved:{u.stat['totalSubmissions']}(+{u.submissions_increase})| submitted: {u.stat['All']}(+{u.submissions_increase}) {u.homepage}\r\r "
+    msg += f"{u.nickname} submitted:{u.stat['totalSubmissions']}(+{u.submissions_increase})| solved: {u.stat['All']}(+{u.submissions_increase}) {u.homepage}\r\r "
 
 
 print(title)
