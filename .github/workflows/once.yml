@@ -1,0 +1,16 @@
+name: Run once
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: Run script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run script
+        run: python script.py
